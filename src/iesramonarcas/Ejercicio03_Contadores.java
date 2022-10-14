@@ -22,8 +22,8 @@ public class Ejercicio03_Contadores {
         
         
         
-//        //*********  USANDO UN DO....WHILE  ***********
-//        
+        //*********  USANDO UN DO....WHILE  ***********
+        
 //        System.out.println("[do..while]Introduce un número y pulsa INTRO. 0 para terminar\n");
 //
 //        int numeroIntroducido; 
@@ -34,15 +34,16 @@ public class Ejercicio03_Contadores {
 //            
 //            System.out.print("Dime el numero:");
 //            numeroIntroducido = Integer.parseInt(entrada.nextLine()); 
+//            
 //            cuentaNumeros++; // Incrementamos el contador
 //            suma = suma + numeroIntroducido; //Acumulamos suma parcial
-//        
+//              
 //        } while (numeroIntroducido != 0 ); 
 //        
 //        System.out.println("\nHas introducido " + (cuentaNumeros-1) + " números.");
 //        System.out.println("La suma total de ellos es " + suma);
-//        
-//        
+        
+        
 
 
         //*********  USANDO UN WHILE  ***********
@@ -53,16 +54,14 @@ public class Ejercicio03_Contadores {
         //Inicializamos variables
         int cuentaNumeros = 0;    //mi contador
         int suma = 0; 
-        int numeroIntroducido=6666666;
+        int numeroIntroducido; 
         
-        //OPCIONAL: Tratamiento especial del primer elemento
-//        System.out.print("Dime el numero:");
-//        numeroIntroducido = Integer.parseInt(entrada.nextLine()); 
-//        suma = suma + numeroIntroducido;
-//        cuentaNumeros++;
-        
-
-
+        //IMPORTANTE: Tratamiento especial del primer elemento
+        System.out.print("Dime el numero:");
+        numeroIntroducido = Integer.parseInt(entrada.nextLine()); 
+        suma = suma + numeroIntroducido;
+        cuentaNumeros++;
+     
         while(numeroIntroducido != 0 ){
             System.out.print("Dime el numero:");
             numeroIntroducido = Integer.parseInt(entrada.nextLine()); 

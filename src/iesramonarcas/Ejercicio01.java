@@ -28,7 +28,7 @@ public class Ejercicio01 {
         
         System.out.println("USANDO FOR");
         System.out.println("==========");
-        for (int i=0;i<=10;i++){
+        for (int i=1;i<=10;i++){
         
             System.out.println(num+"*"+i+"="+(num*i));
             
@@ -36,7 +36,7 @@ public class Ejercicio01 {
         
         System.out.println("USANDO while");
         System.out.println("==========");
-        int j=0;
+        int j=1;
         while (j<=10){
                 System.out.println(num+"*"+j+"="+(num*j));
                 j++;
@@ -47,18 +47,12 @@ public class Ejercicio01 {
         System.out.println("USANDO do..while");
         System.out.println("==========");
         
-        j=0;
+        j=1;
         do{
              System.out.println(num+"*"+j+"="+(num*j));
-                j++;
+             j++;
         }while(j<=10);
         
-        
-        
-        
-        String numero="123456";
-        System.out.println("Tamaño del string:"+numero.length());
-        System.out.println();
         
         
         
