@@ -23,13 +23,10 @@ public class Ejercicio07_vocales {
         String entrada;
         char caracter;
         
-        
-        
         do {
-         
+            //Leemos un caracter por teclado    
             System.out.print("Introduce un caracter:");
             entrada=scn.nextLine();
-            
             caracter=entrada.charAt(0);
             
             

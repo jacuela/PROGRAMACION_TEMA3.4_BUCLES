@@ -31,46 +31,41 @@ public class Ejercicio06_cajafuerte {
         System.out.println("CAJA FUERTE. 3 INTENTOS");
         System.out.println("***********************");
 
-        System.out.println("== opcion1: usando un break ==");
-        do {
-         
-            System.out.print("Introduce la clave ("+intentos+"):");
-            numeroIntroducido=Integer.parseInt(entrada.nextLine());
-            
-            if (numeroIntroducido == password){
-                System.out.println("CLAVE ENCONTRADA!!");
-                break;
-            }
-            
-            intentos--;
-            
-        } while(intentos > 0);
-        
-        
-        
-        
-//        System.out.println("== opcion2: usando booleano ==");
+//        System.out.println("== opcion1: usando un break ==");
 //        do {
-//         
 //            System.out.print("Introduce la clave ("+intentos+"):");
 //            numeroIntroducido=Integer.parseInt(entrada.nextLine());
 //            
 //            if (numeroIntroducido == password){
 //                System.out.println("CLAVE ENCONTRADA!!");
-//                acertado=true;  //opción usando un testigo booleano
-//                    
+//                break;
 //            }
-//            
 //            intentos--;
-//            
-//        } while(intentos > 0 && acertado==false);
+//        } while(intentos > 0);
+        
+        
+        
+        
+        System.out.println("== opcion2: usando booleano ==");
+        do {
+            System.out.print("Introduce la clave ("+intentos+"):");
+            numeroIntroducido=Integer.parseInt(entrada.nextLine());
+            
+            if (numeroIntroducido == password){
+                System.out.println("CLAVE ENCONTRADA!!");
+                acertado=true;  //opción usando un testigo booleano
+            }
+            intentos--;
+        } while(intentos > 0 && acertado==false);
+            // (intentos > 0 && !acertado)
+        
         
         //Si usamos un testigo, podemos consultarlo despues del bucle
-//        if (acertado)
-//            System.out.println("CLAVE ENCONTRADA!!");
-//        else
-//            System.out.println("LO SIENTO. NO HAS PODIDO ENTRAR");
-//                
+        if (acertado)
+            System.out.println("CLAVE ENCONTRADA!!");
+        else
+            System.out.println("LO SIENTO. NO HAS PODIDO ENTRAR");
+                
   
     
     }
