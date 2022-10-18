@@ -43,6 +43,9 @@ public class Ejercicio05 {
             else {
                 numerosCero++;
             } 
+            
+            
+            
         }
         
         System.out.println("Total positivos: "+numerosPositivos);
