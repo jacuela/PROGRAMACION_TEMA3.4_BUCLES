@@ -41,9 +41,6 @@ public class Ejercicio10_Calculadora {
                 opcion=Integer.parseInt(entrada.nextLine());
             }while (opcion<1 || opcion>5);
 
-            
-            
-        
             switch (opcion){
                 case 1:
                         System.out.print("Dime el primer numero:");
@@ -81,7 +78,7 @@ public class Ejercicio10_Calculadora {
                         System.out.println("Saliendo...");
                         break;
                 
-             } //sin switch
+             } //fin switch
           
              if (opcion != 5){
                 System.out.println("--Pulse INTRO para continuar--");
