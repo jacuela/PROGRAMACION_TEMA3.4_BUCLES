@@ -36,7 +36,7 @@ public class Ejercicio13_divisores {
             }
             System.out.println("");
      
-        }while (num>0);    
+        }while (num!=0);    
         
         //Sería muy fácil sacar si el numero num es primo, no?
         

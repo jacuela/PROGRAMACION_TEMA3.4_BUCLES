@@ -63,13 +63,16 @@ public class Ejercicio12_email {
                 }
             }
 
-            if (existe_arroba ==true && existe_punto == true 
-                    && posicion_arroba < posicion_punto){
-                System.out.println(".....CORRECTO");
+            if (!mail.equals("")){
+                    //Hago el análisis
+                    if (existe_arroba ==true && existe_punto == true 
+                            && posicion_arroba < posicion_punto){
+                        System.out.println(".....CORRECTO");
 
-            }
-            else{
-                System.out.println("......INCORRECTO");
+                    }
+                    else{
+                        System.out.println("......INCORRECTO");
+                    }
             }
             
             //Reseteo banderas y contadores
