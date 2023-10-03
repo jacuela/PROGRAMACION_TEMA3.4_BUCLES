@@ -26,38 +26,53 @@ public class Ejercicio00_Iniciacion {
 //            System.out.println("i vale:"+i);
 //            
 //        }
-//     
-//        
+        
+//        System.out.print("Dime repeticiones:");
+//        int pasos=Integer.parseInt(teclado.nextLine());
+//        for (int i=1;i<=pasos;i++){
+//            System.out.println("Hola Pepe");
+//            
+//        }
+//        System.out.println("---------------");
+//        for (int i=0;i<pasos;i++){
+//            System.out.println("Hola Pepe");
+//            
+//        }
+        
+      
+     
+        
 //        System.out.println("\n\n**** while ****");
-//        int i=1;
+//        int i=10;
 //        while(i<=10){
 //            System.out.println(i);
 //            i++;
 //        }
 //        
+        
 //        System.out.println("\n\n**** do while ****");
 //        i=1;
 //        do{
 //            System.out.println(i);
 //            i++;
 //        }while(i<11);
-        
+//        
         
          
 //        System.out.println("\n\n**** Introducir numeros hasta negativ ****");
 //        
 //        int num;
-//        
+        
 //        System.out.println("--- Usando un while ---");
 //        System.out.print("Numero positivo para continuar: ");
 //        num=Integer.parseInt(teclado.nextLine());
-//
+
 //        while (num>=0){
 //            System.out.print("Numero positivo para continuar: ");
 //            num=Integer.parseInt(teclado.nextLine());
 //        }
-//        
-//        
+        
+        
 //        System.out.println("--- Usando un do..while ---");
 //        do{
 //            System.out.print("Numero positivo para continuar: ");
@@ -74,8 +89,17 @@ public class Ejercicio00_Iniciacion {
 //          do{
 //            System.out.print("Numero par para continuar: ");
 //            num=Integer.parseInt(teclado.nextLine());
+//            
+//            //Compruebo numero feo
+//            if (num==8){
+//                System.out.println("Has introducido el num feo");
+//                break;
+//            }
+//            
 //          }while (num%2==0);
-//         
+//     
+
+
 //          //int num;
 //          
 //          System.out.print("Numero par para continuar: ");
@@ -99,8 +123,11 @@ public class Ejercicio00_Iniciacion {
 //            }
 //          }while (true);
            
-          //Usar un for con break. Leer 10 numeros y parar si pongo un impar
+
+
+//          //Usar un for con break. Leer 10 numeros y parar si pongo un impar
 //          int num;
+//          
 //          for (int i=0;i<10;i++){
 //                //System.out.print("Paso "+i+"-->");
 //                System.out.print("PAR para continuar: ");
@@ -109,34 +136,47 @@ public class Ejercicio00_Iniciacion {
 //                    break;
 //                }
 //          }
-          
+//          
 //        //Imprimir letras de la A a la Z  
 //        for (int i=65;i<=90;i++){
 //            System.out.print("Letra:"+(char)i);
 //            System.out.println("---"+(char)(i+32));
 //           
 //        }
-//     
+//   
+            
+
+            //COntadores y acumuladores  
+            int num;
+            int contador=0;
+            int acumulador=0;
+  
+            System.out.println("- Introduce numeros. Cero para fin-");
+            do{
+                System.out.print("Dime un numero:");
+                num=Integer.parseInt(teclado.nextLine());
+                
+                //Cuento los pasos
+                if (num!=0){
+                     acumulador=acumulador+num; 
+                     contador++;
+                }
+                               
+            }while(num!=0);
+            
+            System.out.println("Has introducido "+contador+" numeros");
+            System.out.println("La suma de ellos es "+acumulador);
+            
+            
+            
+            
+            
+            
+            
             
             
             
 
-//            //COntadores y acumuladores  
-//            int num=0;
-//            int suma=0;
-//            int contador=0;
-//
-//            while (num>=0){
-//                System.out.println("Introduce numero: ");
-//                num=Integer.parseInt(teclado.nextLine());
-//                
-//                if (num>=0){
-//                    suma=suma+num;   //añado al acumulador
-//                    contador++;  //incremento contador
-//                }
-//            }
-//            System.out.println("La suma acumulada es:"+suma);
-//            System.out.println("Total numeros introduc:"+contador);
 
     
         
