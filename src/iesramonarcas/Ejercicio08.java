@@ -39,9 +39,9 @@ public class Ejercicio08 {
              
         //Analizamos el testigo
         if (hayNegativos==true)
-            System.out.println("SI has introducido negativos.");
+            System.out.println("SI has introducido negativos");
         else
-            System.out.println("NO has introducido negativos.");
+            System.out.println("NO has introducido negativos");
             
         
         

@@ -20,6 +20,7 @@ public class Ejercicio07_vocales {
         // TODO code application logic here
         Scanner scn = new Scanner(System.in);
         
+        
         String entrada;
         char caracter;
         
@@ -35,7 +36,7 @@ public class Ejercicio07_vocales {
             if (caracter == 'a' || 
                 caracter == 'e' || caracter == 'i' || caracter == 'o' ||
                 caracter == 'u' ){
-                System.out.println("............vocal");
+                System.out.println("......es vocal");
             }
             //Tratamiento del caracter espacio en blanco
             else if (caracter == ' '){
@@ -43,7 +44,7 @@ public class Ejercicio07_vocales {
             }
             //Tratamiento del resto
             else    
-                System.out.println("............no vocal");
+                System.out.println("........es no vocal");
             
         } while(caracter != ' ');
                 
