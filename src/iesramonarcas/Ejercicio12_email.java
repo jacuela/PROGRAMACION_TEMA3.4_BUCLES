@@ -30,8 +30,8 @@ public class Ejercicio12_email {
         String mail;
         boolean existe_arroba=false;
         boolean existe_punto=false;
-        int posicion_punto=0;
-        int posicion_arroba=0;
+        int posicion_punto=-1;
+        int posicion_arroba=-1;
         char caracter;
         
         
@@ -63,7 +63,8 @@ public class Ejercicio12_email {
                 }
             }
 
-            if (!mail.equals("")){
+            if (!mail.equals("")){  //para evitar hacer análisis si he
+                                    //pulsado INTRO
                     //Hago el análisis
                     if (existe_arroba ==true && existe_punto == true 
                             && posicion_arroba < posicion_punto){
@@ -82,9 +83,10 @@ public class Ejercicio12_email {
             posicion_punto=0;
             
             
-        } while (!mail.equals(""));    
+        } while (!mail.equals(""));       //!mail.isEmpty() 
             
             
+
             
             
             //Analizo las posiciones de la arraba y el punto
