@@ -19,6 +19,9 @@ public class Ejercicio13_divisores {
         // TODO code application logic here
         Scanner teclado=new Scanner(System.in);
         int num;   //***EXPLICAR PORQUE NO PUEDO DECLARARLO DENTRO DEL DO..WHILE
+        int contadorDivisores=0;
+        
+        
         
         //http://nosolomates.es/ayuda/ayuda/divisores.htm
         
@@ -28,13 +31,24 @@ public class Ejercicio13_divisores {
         
             System.out.print("Dime un numero (0 para salir):");
             num=Integer.parseInt(teclado.nextLine());
+            contadorDivisores=0;
 
             for (int i = 1; i <= num; i++) {  //i son los posibles divisores
                 if (num%i==0){
                     System.out.println("  El numero "+i+" es divisor de "+num);
+                    contadorDivisores++;
                 }
             }
             System.out.println("");
+            //System.out.println("DEPURA:"+contadorDivisores);
+            if (contadorDivisores==2){
+                System.out.println("El numero "+num+" SI es PRIMO");
+            }
+            else if (num!=0){ //para evitar tratar el CERO
+                System.out.println("El numero "+num+" NO es PRIMO");
+            }
+            
+            
      
         }while (num!=0);    
         
