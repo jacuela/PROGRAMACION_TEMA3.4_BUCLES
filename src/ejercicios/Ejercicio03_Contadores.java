@@ -26,27 +26,27 @@ public class Ejercicio03_Contadores {
         
         System.out.println("[do..while]Introduce un número y pulsa INTRO. 0 para terminar\n");
 
+        
         int numeroIntroducido; 
         int cuentaNumeros = 0;    //mi contador
         int suma = 0;             //mi acumulador
 
-        do{
-            
-            System.out.print("Dime el numero:");
-            numeroIntroducido = Integer.parseInt(entrada.nextLine()); 
-            if (numeroIntroducido!=0){
-                cuentaNumeros++; // Incrementamos el contador
-                suma = suma + numeroIntroducido; //Acumulamos suma parcial
-            }
-            
-              
-        } while (numeroIntroducido != 0 ); 
-        
-        System.out.println("\nHas introducido " + (cuentaNumeros) + " números.");
-        System.out.println("La suma total de ellos es " + suma);
-        
-        
-
+//        do{
+//            
+//            System.out.print("Dime el numero:");
+//            numeroIntroducido = Integer.parseInt(entrada.nextLine()); 
+//            
+//            if (numeroIntroducido!=0){
+//                cuentaNumeros++; // Incrementamos el contador
+//                suma = suma + numeroIntroducido; //Acumulamos suma parcial
+//            }
+//              
+//        } while (numeroIntroducido != 0 ); 
+//        
+//        System.out.println("\nHas introducido " + (cuentaNumeros) + " números.");
+//        System.out.println("La suma total de ellos es " + suma);
+//        
+      
 
         //*********  USANDO UN WHILE  ***********
         
@@ -56,16 +56,19 @@ public class Ejercicio03_Contadores {
         //Inicializamos variables
         cuentaNumeros = 0;    //mi contador
         suma = 0; 
-        numeroIntroducido=-1; //para poder entrar al while. Del anterior, se quedaba en 0 y no entraba 
         
+        System.out.print("Dime el numero:");
+        numeroIntroducido = Integer.parseInt(entrada.nextLine()); 
        
         while(numeroIntroducido != 0 ){
+            
+            cuentaNumeros++; // Incrementamos el contador
+            suma = suma + numeroIntroducido; //Acumulamos suma parcial
+            
             System.out.print("Dime el numero:");
             numeroIntroducido = Integer.parseInt(entrada.nextLine()); 
-           if (numeroIntroducido!=0){
-                cuentaNumeros++; // Incrementamos el contador
-                suma = suma + numeroIntroducido; //Acumulamos suma parcial
-            }
+           
+           
         }
         System.out.println("\nHas introducido " + (cuentaNumeros) + " números.");
         System.out.println("La suma total de ellos es " + suma);
