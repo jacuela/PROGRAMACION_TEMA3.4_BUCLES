@@ -21,61 +21,84 @@ public class Ejercicio06_cajafuerte {
         Scanner entrada=new Scanner (System.in);
     
         String numeroIntroducido;
-        int intentos = 3;
-        String password="0112";   //Lo trato como cadena para permitir password que empiecen por 0
+        int intentos = 0;
+        String password="1234";   //Lo trato como cadena para permitir password que empiecen por 0
                              //int dato=0112    es numero octal   
         
             
   
         
-//        System.out.println("CAJA FUERTE. 3 INTENTOS");
-//        System.out.println("***********************");
+        System.out.println("CAJA FUERTE. 3 INTENTOS");
+        System.out.println("**********1234**********");
+
+        System.out.println("== opcion1: condicion en while y sin booleano ==");
+        
+        do {
+            System.out.print("Introduce la clave:");
+            numeroIntroducido=entrada.nextLine();
+            intentos++;
+            
+            //Mensaje si acierto o fallo
+            if (numeroIntroducido.equals(password)){
+                System.out.println("\033[32mCLAVE ENCONTRADA!!\033[30m");
+              
+            }
+            else if (intentos==3){
+                System.out.println("\033[31mLO SIENTO. CAJA BLOQUEADA\033[30m");
+           
+            }
+        }while (!numeroIntroducido.equals(password)
+                && intentos<3);
+        
+        
+        
+   
+        
+//        System.out.println("== opcion2: usando booleano y sin break ==");
 //
-//        System.out.println("== opcion1: usando un break ==");
+//        boolean acertado = false;
+//
 //        do {
 //            System.out.print("Introduce la clave ("+intentos+"):");
 //            numeroIntroducido=entrada.nextLine();
 //            
-//            
 //            if (numeroIntroducido.equals(password)){
-//                System.out.println("\033[32mCLAVE ENCONTRADA!!\033[30m");
-//                break;
+//                //System.out.println("\033[32mCLAVE ENCONTRADA!!\033[30m");
+//                acertado=true;  //opción usando un testigo booleano
 //            }
 //            intentos--;
-//            if (intentos==0){
-//                System.out.println("\033[31mLO SIENTO. CAJA BLOQUEADA\033[30m");
-//            }
-//        } while(intentos > 0);
-        
-        
-        
-              
-   
-        
-        System.out.println("== opcion2: usando booleano ==");
+//        } while(intentos > 0 && acertado==false);
+//            // (intentos > 0 && !acertado)
+//        
+//        
+//        //Si usamos un testigo, podemos consultarlo despues del bucle
+//        if (acertado)
+//            System.out.println("\033[32mCLAVE ENCONTRADA!!\033[30m");
+//        else
+//            System.out.println("\033[31mLO SIENTO. CAJA BLOQUEADA\033[30m");
+//                
+  
 
-        boolean acertado = false;
 
-        do {
-            System.out.print("Introduce la clave ("+intentos+"):");
+        System.out.println("== opcion3: con break y for ==");
+
+        for (int i = 1; i <=3 ; i++) {
+            System.out.print("Introduce la clave:");
             numeroIntroducido=entrada.nextLine();
             
+            //Mensaje si acierto y salimos con break
             if (numeroIntroducido.equals(password)){
-                //System.out.println("\033[32mCLAVE ENCONTRADA!!\033[30m");
-                acertado=true;  //opción usando un testigo booleano
+                System.out.println("\033[32mCLAVE ENCONTRADA!!\033[30m");
+                break;
             }
-            intentos--;
-        } while(intentos > 0 && acertado==false);
-            // (intentos > 0 && !acertado)
-        
-        
-        //Si usamos un testigo, podemos consultarlo despues del bucle
-        if (acertado)
-            System.out.println("\033[32mCLAVE ENCONTRADA!!\033[30m");
-        else
-            System.out.println("\033[31mLO SIENTO. CAJA BLOQUEADA\033[30m");
-                
-  
+            
+            else if (i==3){
+                System.out.println("\033[31mLO SIENTO. CAJA BLOQUEADA\033[30m");
+           
+            }
+            
+        }
+
     
     }
     

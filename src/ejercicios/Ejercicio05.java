@@ -19,37 +19,90 @@ public class Ejercicio05 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Scanner entrada = new Scanner(System.in);
-        int numero;
+        System.out.println("========================");
+        System.out.println("       Ejercicio 5");
+        System.out.println("========================");
+        
+        
+        Scanner teclado = new Scanner(System.in);
+        int totalNumeros;
+        int num;
         int numerosPositivos=0;
         int numerosNegativos=0;
         int numerosCero=0;
         
+        System.out.println("Dime cuantos numeros quieres introducir:");
+        totalNumeros=Integer.parseInt(teclado.nextLine());
         
-        System.out.print("Cuantos números quieres introducir?: ");
-        int totalNumeros=Integer.parseInt(entrada.nextLine());
         
-        for (int i = 0; i < totalNumeros; i++) {
+        for (int i = 1; i <= totalNumeros; i++) {
             
             System.out.print("Dime un numero:");
-            numero=Integer.parseInt(entrada.nextLine());
-        
-            if (numero>0){
+            num=Integer.parseInt(teclado.nextLine());
+            
+            //Ahora analizo si es positivo, si es nega o cero
+            if (num>0){
+                //es positivo
                 numerosPositivos++;
-            }      
-            else if (numero<0){
+            }
+            else if (num<0){
+                //es negativo
                 numerosNegativos++;
             }
             else {
+                //es cero
                 numerosCero++;
-            } 
-            
+            }
+        
         }
         
+       
         System.out.println("Total positivos: "+numerosPositivos);
         System.out.println("Total negativos: "+numerosNegativos);
         System.out.println("Total cero's: "+numerosCero);
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        
+//        
+//        System.out.print("Cuantos números quieres introducir?: ");
+//        int totalNumeros=Integer.parseInt(entrada.nextLine());
+//        
+//        for (int i = 0; i < totalNumeros; i++) {
+//            
+//            System.out.print("Dime un numero:");
+//            numero=Integer.parseInt(entrada.nextLine());
+//        
+//            if (numero>0){
+//                numerosPositivos++;
+//            }      
+//            else if (numero<0){
+//                numerosNegativos++;
+//            }
+//            else {
+//                numerosCero++;
+//            } 
+//            
+//        }
+//        
+//        
+//        
         
         
     }
