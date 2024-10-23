@@ -23,32 +23,9 @@ public class Ejercicio00_Iniciacion {
         
         
         //===== EJERCICIO DE INTRODUCCION A LOS BUCLES
-        String password;    //la contraseña será flori
-        boolean hasAcertado=false;
-        
-        int intentos=1;
-        
-      
-        while (hasAcertado==false && intentos<=3){
-            System.out.println("\n\nIntento numero: "+intentos);
-            System.out.print("Dime la contraseña:");
-            password = teclado.nextLine();
-        
-            if (password.equals("flori")){
-                System.out.println("Has acertado");
-                hasAcertado=true;
-            }
-            else{
-                System.out.println("Has fallado");     
-            } 
-            
-            intentos=intentos+1;
-            
-        }
-        
-        
-        
-        
+//        String password;    //la contraseña será flori
+//        boolean hasAcertado=false;
+//          
         
 //        //---------- intento1
 //        if (hasAcertado==false){
@@ -98,19 +75,31 @@ public class Ejercicio00_Iniciacion {
 //        }
 //        
 //        
+//        int intentos=1;
+//        
+//      
+//        while (hasAcertado==false && intentos<=3){
+//            System.out.println("\n\nIntento numero: "+intentos);
+//            System.out.print("Dime la contraseña:");
+//            password = teclado.nextLine();
+//        
+//            if (password.equals("flori")){
+//                System.out.println("Has acertado");
+//                hasAcertado=true;
+//            }
+//            else{
+//                System.out.println("Has fallado");     
+//            } 
+//            
+//            intentos=intentos+1;
+//            
+//        }
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+          //==== INICIACION A LOS BUCLES =====================  
+ 
+//       
+          
 //        System.out.println("**** for ****");
 //        for (int i=1;i<=10;i++){
 //            System.out.println("i vale:"+i);
@@ -129,40 +118,39 @@ public class Ejercicio00_Iniciacion {
 //            
 //        }
         
-      
-     
         
 //        System.out.println("\n\n**** while ****");
-//        int i=10;
+//        int i=1;
 //        while(i<=10){
-//            System.out.println(i);
+//            System.out.println("Hola Pepe");
 //            i++;
 //        }
 //        
-        
+//        
 //        System.out.println("\n\n**** do while ****");
 //        i=1;
 //        do{
-//            System.out.println(i);
+//            System.out.println("Hola Pepe");
 //            i++;
-//        }while(i<11);
+//        }while(i<=10);
 //        
         
-         
+
+//
 //        System.out.println("\n\n**** Introducir numeros hasta negativ ****");
 //        
-//        int num;
-        
+//        int num=0;
+//        
 //        System.out.println("--- Usando un while ---");
 //        System.out.print("Numero positivo para continuar: ");
 //        num=Integer.parseInt(teclado.nextLine());
-
+//
 //        while (num>=0){
 //            System.out.print("Numero positivo para continuar: ");
 //            num=Integer.parseInt(teclado.nextLine());
 //        }
-        
-        
+//        
+//        
 //        System.out.println("--- Usando un do..while ---");
 //        do{
 //            System.out.print("Numero positivo para continuar: ");
@@ -172,7 +160,7 @@ public class Ejercicio00_Iniciacion {
         
         
 
-//          //Introducir numeros por teclado hasta impar
+          //Introducir numeros por teclado hasta impar
 //          System.out.println("**** Introducir hasta impar ****");
 //          int num;
 //          
@@ -180,14 +168,15 @@ public class Ejercicio00_Iniciacion {
 //            System.out.print("Numero par para continuar: ");
 //            num=Integer.parseInt(teclado.nextLine());
 //            
-//            //Compruebo numero feo
-//            if (num==8){
-//                System.out.println("Has introducido el num feo");
+//            
+//            if (num==84){
+//                System.out.println("OooH, numerp feo!! bye");
 //                break;
 //            }
 //            
+//            
 //          }while (num%2==0);
-//     
+    
 
 
 //          //int num;
@@ -212,7 +201,7 @@ public class Ejercicio00_Iniciacion {
 //                break;
 //            }
 //          }while (true);
-           
+//           
 
 
 //          //Usar un for con break. Leer 10 numeros y parar si pongo un impar
@@ -233,31 +222,46 @@ public class Ejercicio00_Iniciacion {
 //            System.out.println("---"+(char)(i+32));
 //           
 //        }
-//   
+////   
             
 
             //COntadores y acumuladores  
-            int num;
-            int contador=0;
-            int acumulador=0;
-  
-            System.out.println("- Introduce numeros. Cero para fin-");
-            do{
-                System.out.print("Dime un numero:");
-                num=Integer.parseInt(teclado.nextLine());
+//            int num;
+//            int contador=0;
+//            int acumulador=0;
+//  
+//            System.out.println("- Introduce numeros. Cero para fin-");
+//            do{
+//                System.out.print("Dime un numero:");
+//                num=Integer.parseInt(teclado.nextLine());
+//                
+//                if (num!=0){
+//                    acumulador=acumulador+num; 
+//                    contador++;
+//                }
+//                System.out.println("                         Contador:"+contador);
+//                System.out.println("                         Acumulador:"+acumulador);
+//                System.out.println("----------------------------");
+//                
+//            }while(num!=0);
+//            
+//            System.out.println("Has introducido "+contador+" numeros");
+//            System.out.println("La suma de ellos es "+acumulador);
+//            
+            //Recorrer una cadena
+            System.out.print("Dime una palabra:");
+            String palabra=teclado.nextLine();
+            
+            System.out.println("Palabra: "+palabra);
+            
+            for (int i = 0; i < palabra.length(); i++) {
                 
-                //Cuento los pasos
-                if (num!=0){
-                     acumulador=acumulador+num; 
-                     contador++;
-                }
-                               
-            }while(num!=0);
+                System.out.println("Letra:"+palabra.charAt(i));
+            }
+    
             
-            System.out.println("Has introducido "+contador+" numeros");
-            System.out.println("La suma de ellos es "+acumulador);
-            
-            
+        }
+
             
             
             
