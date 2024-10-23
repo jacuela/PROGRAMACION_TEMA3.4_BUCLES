@@ -29,73 +29,50 @@ public class Ejercicio11_numAfortunados {
         
         String numero;
         char caracter;
-//        int numerosAfortunados=0;
-//        int numerosNoAfortunados=0;
-//        
+        int numerosAfortunados=0;
+        int numerosNoAfortunados=0;
         
         
-        //Trato el primer elemento de forma especial
+        //Para poder hacer un WHILE en lugar de un DO..WHILE, hago una lectura
+        //inicial
         System.out.print("Introduzca un número [INTRO para fin]: ");
         numero=teclado.nextLine();
+          
         
-        for (int i = 0; i < numero.length(); i++) {
+        while (!numero.equals("")) {
+           
+            numerosAfortunados=0;  //reseteo contadores
+            numerosNoAfortunados=0; //reseteo contadores
             
-            System.out.println(numero.charAt(i));
+            for (int i = 0; i < numero.length(); i++) {
+
+                caracter=numero.charAt(i);
+
+                if (caracter == '2' || caracter == '5' || caracter =='8' ){
+                   numerosAfortunados++;
+                } 
+                else{
+                   numerosNoAfortunados++;
+
+                }
+            } //termino el bucle
+
+
+
+            if (numerosAfortunados > numerosNoAfortunados){
+                System.out.println("  El numero "+numero+" es AFORTUNADO");
+            }
+            else{
+                System.out.println("  El numero "+numero+" es NO AFORTUNADO");
+            }
+            
+        
+            System.out.print("Introduzca un número [INTRO para fin]: ");
+            numero=teclado.nextLine();
+          
             
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-//        
-//        
-//        while (!numero.equals("")){
-//          
-//            numerosAfortunados=0;  //reseteo contadores
-//            numerosNoAfortunados=0; //reseteo contadores
-//            
-//            for (int i = 0; i < numero.length(); i++) {
-//
-//                caracter=numero.charAt(i);
-//
-//                if (caracter == '2' || caracter == '5' || caracter =='8' ){
-//                   numerosAfortunados++;
-//                } 
-//                else{
-//                   numerosNoAfortunados++;
-//
-//                }
-//            } //termino el bucle
-//
-//
-//
-//            if (numerosAfortunados > numerosNoAfortunados){
-//                System.out.println("  El numero "+numero+" es AFORTUNADO");
-//            }
-//            else{
-//                System.out.println("  El numero "+numero+" es NO AFORTUNADO");
-//            }
-//            System.out.println("");
-//            System.out.print("Introduzca un número [INTRO para fin]: ");
-//            numero=entrada.nextLine();
-//
-//        }
-//        
         
         
         //*********************************
