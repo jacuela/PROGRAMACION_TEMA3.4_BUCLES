@@ -26,13 +26,53 @@ public class Ejercicio11_numAfortunados {
         System.out.println("   NUMEROS AFORTUNADOS");
         System.out.println("**************************");
         
-        
         String numero;
         char caracter;
         int numerosAfortunados=0;
         int numerosNoAfortunados=0;
         
+        System.out.println("Dí número [INTRO para fin]: ");
+        numero=teclado.nextLine();
         
+        while(!numero.equals("")){
+           
+            for (int i = 0; i < numero.length(); i++) {
+                caracter=numero.charAt(i);
+
+                
+                
+                if (caracter == '2' || caracter == '5' || caracter =='8' ){
+                   numerosAfortunados++;
+                } 
+                else{
+                   numerosNoAfortunados++;
+                }
+            } //termino el bucle
+
+            //Depuracionnnnnnnnnnnnnnnnnn
+            //System.out.println(numerosAfortunados);
+            //System.out.println(numerosNoAfortunados);
+            
+            //Analisis de contadores
+            if (numerosAfortunados > numerosNoAfortunados){
+                System.out.println("  El numero "+numero+" es AFORTUNADO");
+            }
+            else{
+                System.out.println("  El numero "+numero+" es NO AFORTUNADO");
+            }
+            
+            //Reseteo contadores
+            numerosAfortunados=0;
+            numerosNoAfortunados=0;
+            
+            System.out.println("Dí número [INTRO para fin]: ");
+            numero=teclado.nextLine();
+        }
+        
+        
+        
+        
+  /*      
         //Para poder hacer un WHILE en lugar de un DO..WHILE, hago una lectura
         //inicial
         System.out.print("Introduzca un número [INTRO para fin]: ");
@@ -74,7 +114,7 @@ public class Ejercicio11_numAfortunados {
         }
         
         
-        
+ */       
         //*********************************
         //Otra forma de resolverlo usando como
         //entrada un numero, en este caso un long
