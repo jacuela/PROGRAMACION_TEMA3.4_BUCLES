@@ -34,76 +34,54 @@ public class Ejercicio12_email {
         int posicion_arroba=-1;
         char caracter;
         
-        
         System.out.println("Validacion de emails");
-        System.out.println("********************");
+        System.out.println("====================");
         
-        
-        do {
-           
-            System.out.print("Introduce email [INTRO para terminar]: ");
+        do{
+            System.out.println("Dime el email:");
             mail=teclado.nextLine();
+
+            //Reiniciar contadores
+            existe_arroba=false;
+            existe_punto=false;
+            posicion_punto=-1;
+            posicion_arroba=-1;
             
-            //Leo caracter a caracter la cadena introducida
-            //para analizar el email introducido
+            
+           
+            
             for (int i = 0; i < mail.length(); i++) {
                 caracter=mail.charAt(i);
 
-                //Si el caracter es una @, guardo la posición 
                 if (caracter=='@'){
-                    posicion_arroba=i;
                     existe_arroba=true;
-                    
-                }
+                    posicion_arroba=i;
 
-                //Si el caracter es una ., guardo la posición 
+                }
                 if (caracter=='.'){
-                    posicion_punto=i;
                     existe_punto=true;
+                    posicion_punto=i;
+
                 }
             }
 
-            if (!mail.equals("")){  //para evitar hacer análisis si he
-                                    //pulsado INTRO
-                    //Hago el análisis
-                    if (existe_arroba ==true && existe_punto == true 
-                            && posicion_arroba < posicion_punto){
-                        System.out.println(".....CORRECTO");
-
-                    }
-                    else{
-                        System.out.println("......INCORRECTO");
-                    }
+            //Analizo booleano
+            if (existe_arroba==true && 
+                existe_punto==true &&
+                posicion_arroba<posicion_punto){   //if (existe_arroba)
+                System.out.println("email \033[32mVALIDO\033[30m");
             }
-            
-            //Reseteo banderas y contadores
-            existe_arroba=false;
-            existe_punto=false;
-            posicion_arroba=0;
-            posicion_punto=0;
-            
-            
-        } while (!mail.equals(""));       //!mail.isEmpty() 
-            
-            
-
-            
-            
-            //Analizo las posiciones de la arraba y el punto
-//            if (posicion_arroba > 0 && posicion_punto > 0 
-//                    && posicion_arroba<posicion_punto){
-//                System.out.println(".....CORRECTO");
-//
-//            }
-//            else{
-//                System.out.println("......INCORRECTO");
-//            }
-
-//            System.out.println("");
-//            System.out.print("Introduce email [INTRO para terminar]: ");
-//            mail=teclado.nextLine();
+            else{
+                System.out.println("email \033[31mINVALIDO\033[30m");
+            }
+        }while(!mail.equals(""));
         
- //       }
+        
+        
+        
+
+            
+           
      
        
     }
