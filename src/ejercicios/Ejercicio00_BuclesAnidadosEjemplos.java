@@ -23,39 +23,89 @@ public class Ejercicio00_BuclesAnidadosEjemplos {
         Scanner teclado = new Scanner (System.in);
         
         
-        
-        
-        //********************************************************  
-        //***  PARTE A - BUCLES ANIDADOS VARIABLES INDEPENDIENTES
-        //********************************************************
-        
-       
-        //Imprimir los numeros del 1 al 10. Hacerlo 5 veces
-        //           1 2 3 4 5 6 8 9 10
-//        for (int i = 0; i < 5; i++) {
-//        
-//            for (int j = 1; j <= 10; j++) {
-//                System.out.printf("%d ",j);
-//                
-//            }
-//            System.out.println("");
-//            
-//        }
-        
-
-        // Imprimir i y j de dos bucles for
-//        for (int i = 0; i < 5; i++) {
-//            System.out.println("------ Paso externo "+i+"-------");
+//        // Imprimir i y j de dos bucles for
+//        for (int i = 0; i < 2; i++) {
+//            System.out.println("-- Paso externo "+i+"----");
 //            for (int j = 0; j < 5; j++) {
 //                System.out.println(i+" -- "+j);
 //            }
-//            System.out.println();
+//        }
+        
+        //Imprimir los numeros del 1 al 10. Hacerlo 5 veces
+//        System.out.println("");
+//        for (int j = 0; j < 5; j++) {
+//            
+//            //Numeros del 1 al 10
+//            for (int i = 1; i <= 10; i++) {
+//                System.out.print(i+" ");
+//            }
+//            System.out.println("");
+//        }
+        
+        
+       // Imprimir los primeros 9 numeros binarios
+//        int valor;
+//        
+//        for (int i = 0; i <= 1; i++) {
+//            for (int j = 0; j <= 1; j++) {
+//                System.out.print(i+" "+j);
+//                valor=i*2+j*1;
+//                System.out.println("--->"+valor);
+//            }
 //        }
         
 
-        // Imprimir los primeros 9 numeros binarios
-//        int valor;
-//        
+        //Hacer un cuadrado rellenado de 4 x 4
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= 4; j++) {
+                
+                if (i==1 || i==4){
+                    System.out.print(" * ");
+                }
+                else{
+                    if (j==1 || j==4){
+                        System.out.print(" * ");
+                    }
+                    else{
+                        System.out.print("   ");
+                    }
+                }
+            }
+            System.out.println("");
+        }
+        System.out.println("------con un array de 2 dimen---");
+        char [][] dibujo = {{'*','*','*','*'},
+                            {'*',' ',' ','*'},
+                            {'*',' ',' ','*'},
+                            {'*','*','*','*'}};
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(" "+dibujo[i][j]+" ");
+            }
+            System.out.println("");
+        }
+        
+        
+        //Imprimir un triangulo rectangulo de altura 5
+        // @
+        // @@
+        // @@@
+        // @@@@
+        // @@@@@
+        
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("@");
+            }
+            System.out.println("");
+        }
+        
+        
+        
+        
+        
+        
+        
 //        for (int i = 0; i <= 1; i++) {
 //            for (int j = 0; j <= 1; j++) {
 //                for (int k = 0; k <= 1; k++) {
@@ -65,6 +115,12 @@ public class Ejercicio00_BuclesAnidadosEjemplos {
 //                }
 //            }
 //        }
+//        
+
+        
+        
+
+        
 //        
         
         //Imprimir el cubo de 5 numeros aleatorios generados entre 0 y 9
@@ -129,19 +185,8 @@ public class Ejercicio00_BuclesAnidadosEjemplos {
 //           }
 
 
-        //Imprimir la siguiente figura
-        // @
-        // @@
-        // @@@
-        // @@@@
-        // @@@@@
-//        for (int i = 0; i < 5; i++) {
-//            for (int j = 0; j <= i; j++) {
-//                System.out.print("@");
-//            }
-//            System.out.println("");
-//        }
-//
+        
+
 //        
 //        System.out.println("----------------");
 //        

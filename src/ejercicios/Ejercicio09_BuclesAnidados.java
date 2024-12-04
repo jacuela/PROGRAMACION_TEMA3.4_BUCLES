@@ -45,33 +45,37 @@ public class Ejercicio09_BuclesAnidados {
     
           //***************  
           
-          for (int min = 0; min <= 2; min++) {
-              for (int seg = 0; seg <= 59; seg++) {
-                  //Imprimo los minutos y segundos
-                  //Si estoy en los primeros 10 segundos,
-                  //le añado un 0 a la salida 
-                  if (seg>=0 && seg<=9){
-                     System.out.println(min+":0"+seg);
-                  }else{
-                     System.out.println(min+":"+seg);
-                  }
-             
-                  try{
-                      Thread.sleep(1*1000); //Dormimos 1000 miliseg
-                  }
-                  catch (Exception e){
-                      System.out.println(e);
-                  }
-                  
-                  //Me salgo en el 2:00
-                  if (min==2 && seg==0){
-                      break;
-                  }            
-              }
-              
-          }
+//          for (int min = 0; min <= 2; min++) {
+//              for (int seg = 0; seg <= 59; seg++) {
+//                  //Imprimo los minutos y segundos
+//                  //Si estoy en los primeros 10 segundos,
+//                  //le añado un 0 a la salida 
+//                  if (seg>=0 && seg<=9){
+//                     System.out.println(min+":0"+seg);
+//                  }else{
+//                     System.out.println(min+":"+seg);
+//                  }
+//             
+//                  try{
+//                      Thread.sleep(1*1000); //Dormimos 1000 miliseg
+//                  }
+//                  catch (Exception e){
+//                      System.out.println(e);
+//                  }
+//                  
+//                  //Me salgo en el 2:00
+//                  if (min==2 && seg==0){
+//                      break;
+//                  }            
+//              }
+//              
+//          }
+//        
         
-        
+          
+          
+          
+          
         
         
 //        //************** FACTORIAL  *********************
@@ -91,6 +95,26 @@ public class Ejercicio09_BuclesAnidados {
 //        }
     
     
+         System.out.println(factorial(10));
+
+
+
     }
+    
+    
+    
+    public static int factorial(int num){
+        if (num==1){
+            return 1;
+        }
+        else{
+            return num * factorial(num-1);
+        }
+        
+    }
+    
+    
+    
+    
     
 }
